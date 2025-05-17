@@ -1,0 +1,227 @@
+body {
+  background: transparent;
+  position: relative;
+  z-index: 0;
+}
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+#auth-container {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.74);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#auth-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#auth-nav button {
+  background-color: transparent;
+  border: 2px solid #FF3F81;
+  color: #FF3F81;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#auth-nav button.active,
+#auth-nav button:hover {
+  background-color: #FF3F81;
+  color: #23153C;
+}
+
+.auth-page {
+  display: none;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.auth-page.active {
+  display: block;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #FF3F81, #0056b3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  /* z-index: 1000; */
+  color: #23153C;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav#navbar {
+  display: flex;
+  flex-direction: row; /* ensure horizontal layout */
+  gap: 5px; /* reduced gap between buttons */
+}
+
+nav#navbar button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 8px 10px; 
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+ 
+  gap: 3px; 
+  font-size: 16px;
+  box-shadow: none;
+  white-space: nowrap; 
+}
+
+nav#navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: vertical;
+  background-color: #23153C;
+  color: #fff;
+}
+
+button[type="submit"],
+.post-actions button {
+  /* background-color: #28a745; */
+   background: linear-gradient(90deg, #FF3F81, #0056b3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+button[type="submit"]:hover,
+.post-actions button:hover {
+  background: linear-gradient(90deg, #0056b3,#FF3F81);
+}
+
+.post-actions {
+  margin-top: 10px;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 15px; */
+  width: 100%;
+}
+
+.post-card {
+  background-color: #23153C;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  width: 32%;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-card h3 {
+  margin-top: 0;
+  color: #FF3F81;
+}
+
+.post-card p {
+  margin: 8px 0;
+  flex-grow: 1;
+  color: #fff;
+}
+
+.post-author {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+
+#auth-section {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #23153C;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #FF3F81;
+  margin-bottom: 15px;
+}
+

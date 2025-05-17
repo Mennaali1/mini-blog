@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post App Frontend</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="custom-style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="vanta-bg"></div>
+    <header>
+      <h1 id="nav-icon">Posts App</h1>
+      <nav id="navbar" style="display: none">
+        <button id="nav-home">🏠 Home</button>
+        <button id="nav-add-post">➕ Add Post</button>
+        <button id="nav-profile">👤 Profile</button>
+        <button id="signout-btn">🚪 Sign Out</button>
+      </nav>
+    </header>
+
+    <div id="auth-container">
+      <nav id="auth-nav">
+        <button id="show-signup" class="active">Signup</button>
+        <button id="show-signin">Signin</button>
+      </nav>
+
+      <div id="signup-page" class="auth-page active">
+        <h2>Signup</h2>
+        <form id="signup-form">
+          <input type="text" id="signup-name" placeholder="Name" required />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+
+      <div id="signin-page" class="auth-page">
+        <h2>Signin</h2>
+        <form id="signin-form">
+          <input type="email" id="signin-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signin-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Signin</button>
+        </form>
+      </div>
+    </div>
+
+    <main style="display: none">
+      <section id="home-section">
+        <h2>All Posts</h2>
+        <div id="all-posts-container" class="posts-container"></div>
+      </section>
+
+      <section id="add-post-section">
+        <h2>Add Post</h2>
+        <form id="add-post-form">
+          <input type="text" id="post-title" placeholder="Title" required />
+          <textarea
+            id="post-desc"
+            placeholder="Description"
+            required
+          ></textarea>
+          <button type="submit">Add Post</button>
+        </form>
+      </section>
+
+      <section id="profile-section">
+        <h2>Your Posts</h2>
+        <div id="user-posts-container" class="posts-container"></div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/tengbao/vanta/master/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script>
+      window.onload = function () {
+        VANTA.NET({
+          el: "#vanta-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+        });
+      };
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
